@@ -7,6 +7,15 @@
   --clr-neutral-300: #9e9aa7;
   --clr-neutral-200: #35323e;
   --clr-neutral-100: #232127;
+  --slide-down-container: 5.2rem;
+  --slide-down-card: 4.2rem;
+}
+
+@media screen and (width <= 780px) {
+  :root {
+    --slide-down-container: 10.2rem;
+    --slide-down-card: 9.2rem;
+  }
 }
 
 *, :after, :before {
@@ -123,7 +132,7 @@ a {
   }
 
   to {
-    height: 5.2rem;
+    height: var(--slide-down-container);
   }
 }
 
@@ -391,8 +400,8 @@ a {
 }
 
 .shorten__animate {
+  height: var(--slide-down-container);
   width: 0%;
-  height: 5.2rem;
   transition: all .5s ease-in-out;
   position: absolute;
   overflow: hidden;
@@ -407,13 +416,13 @@ a {
 
 .shorten__history {
   box-sizing: border-box;
+  height: var(--slide-down-card);
   background-color: #fff;
   border-radius: .25rem;
   grid-template-columns: 5fr 2.5fr;
   align-items: center;
   gap: 3rem;
   width: 100%;
-  height: 4.2rem;
   padding: 1rem 2rem;
   display: grid;
   overflow: hidden;
@@ -550,21 +559,17 @@ a {
     height: 4rem;
   }
 
-  .shorten__histories {
-    gap: 1rem;
-  }
-
   .shorten__animate {
-    height: auto;
+    height: var(--slide-down-container);
   }
 
   .shorten__history {
+    height: var(--slide-down-card);
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
     gap: .75rem;
     width: 100%;
-    height: auto;
     padding-inline: 1.5rem;
     display: flex;
     position: relative;

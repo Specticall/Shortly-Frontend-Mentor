@@ -1002,7 +1002,6 @@ class Histories {
     // Public API
     addLink(requestedLink, shortenedLink) {
         const newLink = new LinkHistory(requestedLink, shortenedLink);
-        console.log(newLink);
         this.#linkHistories.push(newLink);
         this.#renderLink(newLink);
     }
@@ -1034,10 +1033,9 @@ class Histories {
     </div>
     `;
         // Check viewport size before animating
-        this.#viewportSize === "desktop" ? this.#animateEntranceDesktop(html) : this.#animateEntranceMobile(html);
+        this.#animateEntrance(html, this.#viewportSize);
     }
-    #animateEntranceMobile(html) {}
-    async #animateEntranceDesktop(html) {
+    async #animateEntrance(html, viewport) {
         const dummy = document.createElement("div");
         dummy.classList.add("slidedown-container");
         // 1.Insert dummy (for slide, position static)
@@ -1045,7 +1043,7 @@ class Histories {
         // 2. [await] Animate Dummy slide
         await new Promise((resolve)=>{
             dummy.addEventListener("animationend", ()=>{
-                dummy.style.height = "5.2rem";
+                dummy.style.height = viewport === "desktop" ? "5.2rem" : "10.2rem";
                 resolve();
             });
         });
@@ -1076,7 +1074,7 @@ class Histories {
     }
     #copyLink(e) {
         const clicked = e.target.closest(".shorten__copy");
-        if (!clicked.classList.contains("shorten__copy")) return;
+        if (!clicked || !clicked.classList.contains("shorten__copy")) return;
         // Finds link
         const linkObject = this.#linkHistories.find((history)=>history.id === clicked.dataset.id);
         // Adds shortened link to clipboard

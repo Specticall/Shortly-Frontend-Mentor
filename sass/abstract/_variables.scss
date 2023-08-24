@@ -8,4 +8,15 @@
   --clr-neutral-300: hsl(257, 7%, 63%);
   --clr-neutral-200: hsl(255, 11%, 22%);
   --clr-neutral-100: hsl(260, 8%, 14%);
+
+  // SLIDERS
+  --slide-down-container: 5.2rem;
+  --slide-down-card: 4.2rem;
+}
+
+@include max-width(small-tablet) {
+  :root {
+    --slide-down-container: 10.2rem;
+    --slide-down-card: 9.2rem;
+  }
 }
