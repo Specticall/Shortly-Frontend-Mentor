@@ -1,0 +1,17 @@
+@keyframes slidedown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 5.2rem;
+  }
+}
+
+@keyframes slideright {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

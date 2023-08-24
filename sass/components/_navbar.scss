@@ -1,0 +1,163 @@
+.nav {
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  z-index: 1;
+
+  background-color: white;
+
+  overflow: visible;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 5rem;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo-mobile {
+    display: none;
+    img {
+      width: clamp(7rem, 20vw, 7.5rem);
+    }
+  }
+
+  // Basically acts like the normal container on desktop viewport sizes.
+  &__mobile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+
+  .nav__toggle-mobile {
+    display: none;
+    cursor: pointer;
+    z-index: 2;
+    fill: var(--clr-neutral-300);
+  }
+
+  &__mobile-wrapper {
+    width: 100%;
+  }
+
+  @include max-width(small-tablet) {
+    &__mobile-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      overflow: hidden;
+
+      background-color: var(--clr-accent-dark);
+
+      width: 90vw;
+
+      padding-inline: 2rem;
+      padding-block: 2rem;
+      border-radius: 1rem;
+      height: auto;
+
+      margin: 0 auto;
+
+      .nav__left {
+        flex-direction: column;
+        gap: 1.5rem;
+
+        li > button {
+          color: var(--clr-neutral-500);
+          font-size: 1rem;
+        }
+      }
+
+      .nav__right {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-top: 1rem;
+
+        border-top: 1px solid var(--clr-neutral-300);
+        width: 100%;
+
+        li > button {
+          color: var(--clr-neutral-500);
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &__mobile-wrapper {
+      transition: 0.5s;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 5rem;
+      max-height: 0rem;
+
+      overflow: hidden;
+
+      width: 100%;
+      margin: 0 auto;
+
+      &.mobile-open {
+        max-height: 20rem;
+      }
+    }
+
+    .nav__toggle-mobile {
+      display: flex;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__logo-mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include max-width(phone) {
+    .nav__right {
+      li {
+        width: 100%;
+        text-align: center;
+
+        .button-cyan {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Used for adding extra space before the navbar sticks to the viewport
+.temp {
+  height: 1.25rem;
+  width: 100%;
+}

@@ -1,0 +1,46 @@
+.text {
+  &-small {
+    font-size: 0.8rem;
+  }
+
+  &-medium {
+    font-size: 1rem;
+  }
+
+  &-large {
+    font-size: 2rem;
+  }
+
+  &-very-large {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+
+  &-bold {
+    font-weight: bold;
+  }
+
+  &-italic {
+    font-style: italic;
+  }
+
+  &-black {
+    color: var(--clr-neutral-100);
+  }
+
+  &-gray {
+    color: var(--clr-neutral-300);
+  }
+
+  &-cyan {
+    color: var(--clr-accent-cyan);
+  }
+
+  &-red {
+    color: var(--clr-accent-red);
+  }
+
+  &-white {
+    color: white;
+  }
+}

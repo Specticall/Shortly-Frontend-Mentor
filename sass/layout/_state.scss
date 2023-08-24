@@ -1,0 +1,136 @@
+.state {
+  padding-top: 1rem;
+  padding-bottom: 10rem;
+  text-align: center;
+
+  .section {
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+    overflow: visible;
+  }
+
+  &__paragraph {
+    max-width: 35rem;
+    margin-top: 0.8rem;
+    line-height: 1.75;
+  }
+
+  .cards {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: clamp(1rem, 3vw, 3rem);
+
+    & > *:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: -3rem;
+
+        height: 0.5rem;
+        width: 3rem;
+
+        background-color: var(--clr-accent-cyan);
+      }
+    }
+
+    .card {
+      &--2 {
+        transform: translateY(2rem);
+      }
+
+      &--3 {
+        transform: translateY(4rem);
+      }
+    }
+
+    .card__stats {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+
+      position: relative;
+
+      text-align: start;
+
+      gap: 1rem;
+
+      background-color: white;
+
+      padding: 3.5rem 2rem 2rem 2rem;
+
+      line-height: 1.75;
+    }
+
+    .card__icon {
+      position: absolute;
+      top: -2rem;
+
+      background-color: var(--clr-accent-dark);
+
+      padding: 1rem;
+      aspect-ratio: 1;
+
+      border-radius: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & {
+        img {
+          width: 2rem;
+          aspect-ratio: 1;
+        }
+      }
+    }
+  }
+
+  @include max-width(tablet) {
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 30rem;
+
+      & > * {
+        transform: translate(0, 0);
+      }
+
+      // Remove previous blue lines (horizontal)
+      & > *:not(:last-child) {
+        &::after {
+          display: none;
+        }
+      }
+
+      // Add new vertical blue lines
+      & > *:not(:first-child) {
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: -4rem;
+          transform: translate(-50%, 0%);
+
+          height: 4rem;
+          width: 0.25rem;
+
+          background-color: var(--clr-accent-cyan);
+        }
+      }
+
+      .card__icon {
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+
+      .card__stats {
+        text-align: center;
+        align-items: center;
+      }
+    }
+  }
+}

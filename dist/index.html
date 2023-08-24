@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.654148d5.png">
+    <title>
+      Frontend Mentor | Shortly URL shortening API Challenge
+    </title>
+    <!-- ==== SASS === -->
+    <link rel="stylesheet" href="/index.8d8029cf.css">
+    <!-- ====== SCRIPT ======= -->
+    <script defer="" src="/index.fbb3188c.js"></script>
+    <!-- ====== FONTS ======= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="temp"></div>
+    <!-- === NAVBAR === -->
+    <nav class="nav">
+      <div class="nav__container section">
+        <div class="nav__logo-mobile">
+          <img src="/logo.b3ecd760.svg" alt="logo">
+        </div>
+        <box-icon class="button nav__toggle-mobile" type="regular" name="menu" size="36px"></box-icon>
+        <!-- CONTAINER FOR THE MOBILE VER -->
+        <div class="nav__mobile-wrapper">
+          <div class="nav__mobile-container">
+            <ul class="nav__left">
+              <li class="nav__logo">
+                <img src="/logo.b3ecd760.svg" alt="logo">
+              </li>
+              <li>
+                <button class="button text-small text-bold text-gray hover-toBlack">
+                  Features
+                </button>
+              </li>
+              <li>
+                <button class="button text-small text-bold text-gray hover-toBlack">
+                  Pricing
+                </button>
+              </li>
+              <li>
+                <button class="button text-small text-bold text-gray hover-toBlack">
+                  Resources
+                </button>
+              </li>
+            </ul>
+            <ul class="nav__right">
+              <li>
+                <button class="button text-small text-bold text-gray hover-toBlack">
+                  Login
+                </button>
+              </li>
+              <li>
+                <button class="button button-small rounded-heavy button-cyan text-small text-bold text-gray">
+                  Sign Up
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- === MAIN === -->
+    <main>
+      <!-- === HERO === -->
+      <section class="hero section">
+        <header>
+          <h1 class="text-very-large text-black text-bold">
+            More than just shorter links
+          </h1>
+          <p class="text-medium text-gray">
+            Build your brand's recognition and get detailed
+            insights on how your links are performing
+          </p>
+          <button class="button button-large rounded-heavy button-cyan text-bold text-medium text-white">
+            Get Started
+          </button>
+        </header>
+        <img class="hero__img" src="/illustration-working.3cbcdaa9.svg" alt="hero image">
+      </section>
+      <!-- === SHORTEN === -->
+      <section class="shorten bg-gray">
+        <div class="section">
+          <!-- MAIN FORM -->
+          <form action="#" class="shorten-container">
+            <div class="shorten__content">
+              <div class="shorten__input-container">
+                <input id="shorten__input" type="text" class="shorten__input rounded" placeholder="Shorten a link here">
+                <label for="shorten__input" class="shorted__input-warning text text-small text-italic text-red">Please add a link</label>
+              </div>
+              <div class="loading-link">
+                <box-icon color="white" animation="spin" class="loading-icon" name="loader"></box-icon>
+              </div>
+              <button class="shorten__submit button button-large text-bold button-cyan rounded-light text-small">
+                Shorten It!
+              </button>
+            </div>
+
+            <img class="shorten__background" src="/bg-shorten-desktop.ce53576e.svg" alt="shorten background">
+          </form>
+
+          <!-- SHORTEN HISTORY -->
+          <!-- <div class="slideDown-container">
+            <div class="slideDown"></div>
+          </div> -->
+          <!-- <article class="shorten__history hidden">
+            <div class="shorten__history--left">
+              <h3 class="text-medium text-black">
+                https://www.frontendmentor.io
+              </h3>
+            </div>
+            <div class="shorten__history--right">
+              <p class="text-medium text-cyan">
+                https://rel.ink/k4lKyk
+              </p>
+              <button
+                class="button button-small rounded-light button-cyan text-bold text-small"
+              >
+                Copy
+              </button>
+            </div>
+          </article> -->
+          <div class="shorten__histories">
+            <!-- ============== -->
+            <!-- === BE CAREFUl THESE WILL NOT WORK BECAUSE POSITION IS SET TO ABSOLUTE AT DEFAULT -->
+            <!-- <div class="shorten__animate">
+              <article class="shorten__history">
+                <div class="shorten__history--left">
+                  <h3 class="text-medium text-black">
+                    https://www.frontendmentor.iohttps://www.frontendmentor.iohttps://www.frontendmentor.iohttps://www.frontendmentor.iohttps://www.frontendmentor.io
+                  </h3>
+                </div>
+                <div class="shorten__history--right">
+                  <span class="text-medium text-cyan">
+                    <div>https://rel.ink/k4lKyk</div>
+                  </span>
+                  <button
+                    class="fixed-width button button-small rounded-light button-cyan text-bold text-small"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="shorten__animate">
+              <article class="shorten__history">
+                <div class="shorten__history--left">
+                  <h3 class="text-medium text-black">
+                    https://www.frontendmentor.io
+                  </h3>
+                </div>
+                <div class="shorten__history--right">
+                  <span class="text-medium text-cyan">
+                    <div>https://rel.ink/k4lKyk</div>
+                  </span>
+                  <button
+                    class="button button-small rounded-light button-cyan text-bold text-small button-copied-state"
+                  >
+                    Copied!
+                  </button>
+                </div>
+              </article>
+            </div>
+            <div class="shorten__animate">
+              <article class="shorten__history">
+                <div class="shorten__history--left">
+                  <h3 class="text-medium text-black">
+                    https://www.frontendmentor.io
+                  </h3>
+                </div>
+                <div class="shorten__history--right">
+                  <span class="text-medium text-cyan">
+                    <div>https://rel.ink/k4lKyk</div>
+                  </span>
+                  <button
+                    class="button button-small rounded-light button-cyan text-bold text-small button-copied-state"
+                  >
+                    Copied!
+                  </button>
+                </div>
+              </article>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- === CARD STATS === -->
+      <section class="state bg-gray">
+        <div class="section">
+          <h2 class="text-large text-black text-bold">
+            Advanced Statistics
+          </h2>
+          <p class="state__paragraph text-medium text-gray">
+            Track how your links are performing across the
+            web with our advanced statistics dashboard.
+          </p>
+          <!-- CARDS -->
+          <div class="cards">
+            <!-- === CARD 1 === -->
+            <article class="card__stats card--1">
+              <div class="card__icon">
+                <img src="/icon-brand-recognition.e3d5d8b6.svg" alt="">
+              </div>
+              <h3 class="text-black text-medium text-bold">
+                Brand Recognition
+              </h3>
+              <p class="text-gray text-small">
+                Boost your brand recofnition with each
+                click, Generic links don't mean a thing.
+                Branded links help instil confidence in your
+                content
+              </p>
+            </article>
+            <!-- === CARD 2 === -->
+            <article class="card__stats card--2">
+              <div class="card__icon">
+                <img src="/icon-detailed-records.cb7e47b8.svg" alt="">
+              </div>
+              <h3 class="text-black text-medium text-bold">
+                Detailed Records
+              </h3>
+              <p class="text-gray text-small">
+                Gain insights into who is clicking your
+                link.s Knowing where and where people engage
+                with your content helps inform better
+                decisions
+              </p>
+            </article>
+            <!-- === CARD 3 === -->
+            <article class="card__stats card--3">
+              <div class="card__icon">
+                <img src="/icon-fully-customizable.0760f4c7.svg" alt="">
+              </div>
+              <h3 class="text-black text-medium text-bold">
+                Fully Customizable
+              </h3>
+              <p class="text-gray text-small">
+                Improve awareness and content
+                discoverability through customizable links,
+                supercharging audience engagement
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- === GET STARTED === -->
+      <section class="get-started">
+        <div class="section get-started__content">
+          <h2 class="text-bold text-large text-white">
+            Boost your links today
+          </h2>
+          <button class="button button-large rounded-heavy button-cyan text-bold text-medium text-white">
+            Get Started
+          </button>
+        </div>
+        <img class="get-started__background" src="/bg-boost-desktop.6a0ec846.svg" alt="get started background">
+      </section>
+    </main>
+    <!-- ==== FOOTER ==== -->
+    <!-- prettier-ignore -->
+    <footer class="footer">
+        <ul class="section">        
+        <li class="footer__logo">
+          <img class="footer-logo" src="/logo.b3ecd760.svg" alt="footer logo">
+        </li>
+        <li class="footer__features">
+          <h3 class="text-white text-bold">Features</h3>
+          <p class="hover-toCyan text-small text-gray button">Link Shortening</p>
+          <p class="hover-toCyan text-small text-gray button">Branded Links</p>
+          <p class="hover-toCyan text-small text-gray button">Analytics</p>
+        </li>
+        <li class="footer__resources">
+          <h3 class="text-white text-bold">Resources</h3>
+          <p class="hover-toCyan text-small text-gray button">Blog</p>
+          <p class="hover-toCyan text-small text-gray button">Developers</p>
+          <p class="hover-toCyan text-small text-gray button">Support</p>
+        </li>
+        <li class="footer__company">
+          <h3 class="text-white text-bold">Company</h3>
+          <p class="hover-toCyan text-small text-gray button">About</p>
+          <p class="hover-toCyan text-small text-gray button">Our Team</p>
+          <p class="hover-toCyan text-small text-gray button">Careers</p>
+          <p class="hover-toCyan text-small text-gray button">Contact</p>
+        </li>
+        <li class="footer__socials hover-toCyan">
+          <box-icon class="icon hover-toCyan button" type="logo" name="facebook-square"></box-icon>
+          <box-icon class="icon hover-toCyan button" name="twitter" type="logo"></box-icon>
+          <box-icon class="icon hover-toCyan button" name="pinterest" type="logo"></box-icon>
+          <box-icon class="icon hover-toCyan button" name="instagram" type="logo"></box-icon>
+        </li>
+      </ul>
+
+
+
+    </footer>
+  </body>
+  <!-- 
+    very large h1
+    small (paragraphs & buttons) 
+    medium (shorten result)
+    large (h2)
+   -->
+</html>

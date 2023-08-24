@@ -1,0 +1,53 @@
+.rounded {
+  &-heavy {
+    border-radius: 2rem;
+  }
+
+  &-light {
+    border-radius: 0.25rem;
+  }
+}
+
+.hover {
+  &-toBlack {
+    &:hover {
+      color: var(--clr-neutral-100);
+    }
+  }
+
+  &-toCyan {
+    &:hover {
+      color: var(--clr-accent-cyan);
+    }
+
+    &.icon {
+      &:hover {
+        fill: var(--clr-accent-cyan);
+      }
+    }
+  }
+}
+
+.section {
+  padding-inline: 6rem;
+  margin-inline: auto;
+  max-width: 1300px;
+
+  overflow: hidden;
+}
+
+.bg-gray {
+  background-color: var(--clr-neutral-500);
+}
+
+@include max-width(tablet) {
+  .section {
+    padding-inline: 3rem;
+  }
+}
+
+@include max-width(small-tablet) {
+  .section {
+    padding-inline: 1.5rem;
+  }
+}

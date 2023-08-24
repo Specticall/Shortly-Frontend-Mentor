@@ -1,0 +1,40 @@
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  transition: 0.1s;
+
+  &-cyan {
+    background-color: var(--clr-accent-cyan);
+    color: white;
+
+    &:hover {
+      background-color: #73ecec;
+    }
+  }
+
+  &-copied-state {
+    background-color: var(--clr-accent-dark);
+    color: white;
+
+    &:hover {
+      background-color: var(--clr-accent-dark);
+    }
+  }
+
+  &-small {
+    width: 6.5rem;
+    padding-block: 0.5rem;
+  }
+
+  &-large {
+    width: 10rem;
+    padding-block: 0.6rem;
+  }
+}
+
+.fixed-width {
+  &.small {
+  }
+}
