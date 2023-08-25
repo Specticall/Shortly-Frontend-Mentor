@@ -2,10 +2,9 @@
   "name": "shortly",
   "version": "1.0.0",
   "description": "![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)",
-  "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --public-url ./"
   },
   "author": "",
   "license": "ISC",
