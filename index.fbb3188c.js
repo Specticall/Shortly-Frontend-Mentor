@@ -575,571 +575,14 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"bDbGG":[function(require,module,exports) {
 var _webImmediateJs = require("core-js/modules/web.immediate.js");
+var _esnextSymbolDisposeJs = require("core-js/modules/esnext.symbol.dispose.js");
 var _boxicons = require("boxicons");
 var _mobileNavJs = require("./mobile-nav.js");
 var _shortenlinkJs = require("./shortenlink.js");
 var _linkHistoryJs = require("./link-history.js");
 var _runtime = require("regenerator-runtime/runtime");
 
-},{"boxicons":"1afqO","./mobile-nav.js":"8OKvh","./shortenlink.js":"3JIcE","./link-history.js":"xNAhf","core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ"}],"1afqO":[function(require,module,exports) {
-!function(t, e, n, r, o) {
-    if ("customElements" in n) o();
-    else {
-        if (n.AWAITING_WEB_COMPONENTS_POLYFILL) return void n.AWAITING_WEB_COMPONENTS_POLYFILL.then(o);
-        var a = n.AWAITING_WEB_COMPONENTS_POLYFILL = f();
-        a.then(o);
-        var i = n.WEB_COMPONENTS_POLYFILL || "//cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.0.2/webcomponents-bundle.js", s = n.ES6_CORE_POLYFILL || "//cdnjs.cloudflare.com/ajax/libs/core-js/2.5.3/core.min.js";
-        "Promise" in n ? c(i).then(function() {
-            a.isDone = !0, a.exec();
-        }) : c(s).then(function() {
-            c(i).then(function() {
-                a.isDone = !0, a.exec();
-            });
-        });
-    }
-    function f() {
-        var t = [];
-        return t.isDone = !1, t.exec = function() {
-            t.splice(0).forEach(function(t) {
-                t();
-            });
-        }, t.then = function(e) {
-            return t.isDone ? e() : t.push(e), t;
-        }, t;
-    }
-    function c(t) {
-        var e = f(), n = r.createElement("script");
-        return n.type = "text/javascript", n.readyState ? n.onreadystatechange = function() {
-            "loaded" != n.readyState && "complete" != n.readyState || (n.onreadystatechange = null, e.isDone = !0, e.exec());
-        } : n.onload = function() {
-            e.isDone = !0, e.exec();
-        }, n.src = t, r.getElementsByTagName("head")[0].appendChild(n), n.then = e.then, n;
-    }
-}(0, 0, window, document, function() {
-    var t, e;
-    t = window, e = function() {
-        return function(t) {
-            var e = {};
-            function n(r) {
-                if (e[r]) return e[r].exports;
-                var o = e[r] = {
-                    i: r,
-                    l: !1,
-                    exports: {}
-                };
-                return t[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports;
-            }
-            return n.m = t, n.c = e, n.d = function(t, e, r) {
-                n.o(t, e) || Object.defineProperty(t, e, {
-                    enumerable: !0,
-                    get: r
-                });
-            }, n.r = function(t) {
-                "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, {
-                    value: "Module"
-                }), Object.defineProperty(t, "__esModule", {
-                    value: !0
-                });
-            }, n.t = function(t, e) {
-                if (1 & e && (t = n(t)), 8 & e) return t;
-                if (4 & e && "object" == typeof t && t && t.__esModule) return t;
-                var r = Object.create(null);
-                if (n.r(r), Object.defineProperty(r, "default", {
-                    enumerable: !0,
-                    value: t
-                }), 2 & e && "string" != typeof t) for(var o in t)n.d(r, o, (function(e) {
-                    return t[e];
-                }).bind(null, o));
-                return r;
-            }, n.n = function(t) {
-                var e = t && t.__esModule ? function() {
-                    return t.default;
-                } : function() {
-                    return t;
-                };
-                return n.d(e, "a", e), e;
-            }, n.o = function(t, e) {
-                return Object.prototype.hasOwnProperty.call(t, e);
-            }, n.p = "", n(n.s = 5);
-        }([
-            function(t, e) {
-                t.exports = function(t) {
-                    var e = [];
-                    return e.toString = function() {
-                        return this.map(function(e) {
-                            var n = function(t, e) {
-                                var n, r = t[1] || "", o = t[3];
-                                if (!o) return r;
-                                if (e && "function" == typeof btoa) {
-                                    var a = (n = o, "/*# sourceMappingURL=data:application/json;charset=utf-8;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(n)))) + " */"), i = o.sources.map(function(t) {
-                                        return "/*# sourceURL=" + o.sourceRoot + t + " */";
-                                    });
-                                    return [
-                                        r
-                                    ].concat(i).concat([
-                                        a
-                                    ]).join("\n");
-                                }
-                                return [
-                                    r
-                                ].join("\n");
-                            }(e, t);
-                            return e[2] ? "@media " + e[2] + "{" + n + "}" : n;
-                        }).join("");
-                    }, e.i = function(t, n) {
-                        "string" == typeof t && (t = [
-                            [
-                                null,
-                                t,
-                                ""
-                            ]
-                        ]);
-                        for(var r = {}, o = 0; o < this.length; o++){
-                            var a = this[o][0];
-                            "number" == typeof a && (r[a] = !0);
-                        }
-                        for(o = 0; o < t.length; o++){
-                            var i = t[o];
-                            "number" == typeof i[0] && r[i[0]] || (n && !i[2] ? i[2] = n : n && (i[2] = "(" + i[2] + ") and (" + n + ")"), e.push(i));
-                        }
-                    }, e;
-                };
-            },
-            function(t, e, n) {
-                var r = n(3);
-                t.exports = "string" == typeof r ? r : r.toString();
-            },
-            function(t, e, n) {
-                var r = n(4);
-                t.exports = "string" == typeof r ? r : r.toString();
-            },
-            function(t, e, n) {
-                (t.exports = n(0)(!1)).push([
-                    t.i,
-                    "@-webkit-keyframes spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@-webkit-keyframes burst{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}90%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@keyframes burst{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}90%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@-webkit-keyframes flashing{0%{opacity:1}45%{opacity:0}90%{opacity:1}}@keyframes flashing{0%{opacity:1}45%{opacity:0}90%{opacity:1}}@-webkit-keyframes fade-left{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(-20px);transform:translateX(-20px);opacity:0}}@keyframes fade-left{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(-20px);transform:translateX(-20px);opacity:0}}@-webkit-keyframes fade-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(20px);transform:translateX(20px);opacity:0}}@keyframes fade-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(20px);transform:translateX(20px);opacity:0}}@-webkit-keyframes fade-up{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(-20px);transform:translateY(-20px);opacity:0}}@keyframes fade-up{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(-20px);transform:translateY(-20px);opacity:0}}@-webkit-keyframes fade-down{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}}@keyframes fade-down{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}}@-webkit-keyframes tada{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}10%,20%{-webkit-transform:scale3d(.95,.95,.95) rotate(-10deg);transform:scale3d(.95,.95,.95) rotate(-10deg)}30%,50%,70%,90%{-webkit-transform:scaleX(1) rotate(10deg);transform:scaleX(1) rotate(10deg)}40%,60%,80%{-webkit-transform:scaleX(1) rotate(-10deg);transform:scaleX(1) rotate(-10deg)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes tada{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}10%,20%{-webkit-transform:scale3d(.95,.95,.95) rotate(-10deg);transform:scale3d(.95,.95,.95) rotate(-10deg)}30%,50%,70%,90%{-webkit-transform:scaleX(1) rotate(10deg);transform:scaleX(1) rotate(10deg)}40%,60%,80%{-webkit-transform:rotate(-10deg);transform:rotate(-10deg)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}.bx-spin,.bx-spin-hover:hover{-webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite}.bx-tada,.bx-tada-hover:hover{-webkit-animation:tada 1.5s ease infinite;animation:tada 1.5s ease infinite}.bx-flashing,.bx-flashing-hover:hover{-webkit-animation:flashing 1.5s infinite linear;animation:flashing 1.5s infinite linear}.bx-burst,.bx-burst-hover:hover{-webkit-animation:burst 1.5s infinite linear;animation:burst 1.5s infinite linear}.bx-fade-up,.bx-fade-up-hover:hover{-webkit-animation:fade-up 1.5s infinite linear;animation:fade-up 1.5s infinite linear}.bx-fade-down,.bx-fade-down-hover:hover{-webkit-animation:fade-down 1.5s infinite linear;animation:fade-down 1.5s infinite linear}.bx-fade-left,.bx-fade-left-hover:hover{-webkit-animation:fade-left 1.5s infinite linear;animation:fade-left 1.5s infinite linear}.bx-fade-right,.bx-fade-right-hover:hover{-webkit-animation:fade-right 1.5s infinite linear;animation:fade-right 1.5s infinite linear}",
-                    ""
-                ]);
-            },
-            function(t, e, n) {
-                (t.exports = n(0)(!1)).push([
-                    t.i,
-                    '.bx-rotate-90{transform:rotate(90deg);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)"}.bx-rotate-180{transform:rotate(180deg);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"}.bx-rotate-270{transform:rotate(270deg);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"}.bx-flip-horizontal{transform:scaleX(-1);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)"}.bx-flip-vertical{transform:scaleY(-1);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"}',
-                    ""
-                ]);
-            },
-            function(t, e, n) {
-                "use strict";
-                n.r(e), n.d(e, "BoxIconElement", function() {
-                    return g;
-                });
-                var r, o, a, i, s = n(1), f = n.n(s), c = n(2), l = n.n(c), m = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
-                    return typeof t;
-                } : function(t) {
-                    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
-                }, u = function() {
-                    function t(t, e) {
-                        for(var n = 0; n < e.length; n++){
-                            var r = e[n];
-                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r);
-                        }
-                    }
-                    return function(e, n, r) {
-                        return n && t(e.prototype, n), r && t(e, r), e;
-                    };
-                }(), d = (o = (r = Object).getPrototypeOf || function(t) {
-                    return t.__proto__;
-                }, a = r.setPrototypeOf || function(t, e) {
-                    return t.__proto__ = e, t;
-                }, i = "object" === ("undefined" == typeof Reflect ? "undefined" : m(Reflect)) ? Reflect.construct : function(t, e, n) {
-                    var r, o = [
-                        null
-                    ];
-                    return o.push.apply(o, e), r = t.bind.apply(t, o), a(new r, n.prototype);
-                }, function(t) {
-                    var e = o(t);
-                    return a(t, a(function() {
-                        return i(e, arguments, o(this).constructor);
-                    }, e));
-                }), p = window, b = {}, y = document.createElement("template"), h = function() {
-                    return !!p.ShadyCSS;
-                };
-                y.innerHTML = '\n<style>\n:host {\n  display: inline-block;\n  font-size: initial;\n  box-sizing: border-box;\n  width: 24px;\n  height: 24px;\n}\n:host([size=xs]) {\n    width: 0.8rem;\n    height: 0.8rem;\n}\n:host([size=sm]) {\n    width: 1.55rem;\n    height: 1.55rem;\n}\n:host([size=md]) {\n    width: 2.25rem;\n    height: 2.25rem;\n}\n:host([size=lg]) {\n    width: 3.0rem;\n    height: 3.0rem;\n}\n\n:host([size]:not([size=""]):not([size=xs]):not([size=sm]):not([size=md]):not([size=lg])) {\n    width: auto;\n    height: auto;\n}\n:host([pull=left]) #icon {\n    float: left;\n    margin-right: .3em!important;\n}\n:host([pull=right]) #icon {\n    float: right;\n    margin-left: .3em!important;\n}\n:host([border=square]) #icon {\n    padding: .25em;\n    border: .07em solid rgba(0,0,0,.1);\n    border-radius: .25em;\n}\n:host([border=circle]) #icon {\n    padding: .25em;\n    border: .07em solid rgba(0,0,0,.1);\n    border-radius: 50%;\n}\n#icon,\nsvg {\n  width: 100%;\n  height: 100%;\n}\n#icon {\n    box-sizing: border-box;\n} \n' + f.a + "\n" + l.a + '\n</style>\n<div id="icon"></div>';
-                var g = d(function(t) {
-                    function e() {
-                        !function(t, e) {
-                            if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function");
-                        }(this, e);
-                        var t = function(t, e) {
-                            if (!t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                            return !e || "object" != typeof e && "function" != typeof e ? t : e;
-                        }(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this));
-                        return t.$ui = t.attachShadow({
-                            mode: "open"
-                        }), t.$ui.appendChild(t.ownerDocument.importNode(y.content, !0)), h() && p.ShadyCSS.styleElement(t), t._state = {
-                            $iconHolder: t.$ui.getElementById("icon"),
-                            type: t.getAttribute("type")
-                        }, t;
-                    }
-                    return function(t, e) {
-                        if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function, not " + typeof e);
-                        t.prototype = Object.create(e && e.prototype, {
-                            constructor: {
-                                value: t,
-                                enumerable: !1,
-                                writable: !0,
-                                configurable: !0
-                            }
-                        }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e);
-                    }(e, HTMLElement), u(e, null, [
-                        {
-                            key: "getIconSvg",
-                            value: function(t, e) {
-                                var n = this.cdnUrl + "/regular/bx-" + t + ".svg";
-                                return "solid" === e ? n = this.cdnUrl + "/solid/bxs-" + t + ".svg" : "logo" === e && (n = this.cdnUrl + "/logos/bxl-" + t + ".svg"), n && b[n] || (b[n] = new Promise(function(t, e) {
-                                    var r = new XMLHttpRequest;
-                                    r.addEventListener("load", function() {
-                                        this.status < 200 || this.status >= 300 ? e(new Error(this.status + " " + this.responseText)) : t(this.responseText);
-                                    }), r.onerror = e, r.onabort = e, r.open("GET", n), r.send();
-                                })), b[n];
-                            }
-                        },
-                        {
-                            key: "define",
-                            value: function(t) {
-                                t = t || this.tagName, h() && p.ShadyCSS.prepareTemplate(y, t), customElements.define(t, this);
-                            }
-                        },
-                        {
-                            key: "cdnUrl",
-                            get: function() {
-                                return "//unpkg.com/boxicons@2.1.4/svg";
-                            }
-                        },
-                        {
-                            key: "tagName",
-                            get: function() {
-                                return "box-icon";
-                            }
-                        },
-                        {
-                            key: "observedAttributes",
-                            get: function() {
-                                return [
-                                    "type",
-                                    "name",
-                                    "color",
-                                    "size",
-                                    "rotate",
-                                    "flip",
-                                    "animation",
-                                    "border",
-                                    "pull"
-                                ];
-                            }
-                        }
-                    ]), u(e, [
-                        {
-                            key: "attributeChangedCallback",
-                            value: function(t, e, n) {
-                                var r = this._state.$iconHolder;
-                                switch(t){
-                                    case "type":
-                                        !function(t, e, n) {
-                                            var r = t._state;
-                                            r.$iconHolder.textContent = "", r.type && (r.type = null), r.type = !n || "solid" !== n && "logo" !== n ? "regular" : n, void 0 !== r.currentName && t.constructor.getIconSvg(r.currentName, r.type).then(function(t) {
-                                                r.type === n && (r.$iconHolder.innerHTML = t);
-                                            }).catch(function(t) {
-                                                console.error("Failed to load icon: " + r.currentName + "\n" + t);
-                                            });
-                                        }(this, 0, n);
-                                        break;
-                                    case "name":
-                                        !function(t, e, n) {
-                                            var r = t._state;
-                                            r.currentName = n, r.$iconHolder.textContent = "", n && void 0 !== r.type && t.constructor.getIconSvg(n, r.type).then(function(t) {
-                                                r.currentName === n && (r.$iconHolder.innerHTML = t);
-                                            }).catch(function(t) {
-                                                console.error("Failed to load icon: " + n + "\n" + t);
-                                            });
-                                        }(this, 0, n);
-                                        break;
-                                    case "color":
-                                        r.style.fill = n || "";
-                                        break;
-                                    case "size":
-                                        !function(t, e, n) {
-                                            var r = t._state;
-                                            r.size && (r.$iconHolder.style.width = r.$iconHolder.style.height = "", r.size = r.sizeType = null), n && !/^(xs|sm|md|lg)$/.test(r.size) && (r.size = n.trim(), r.$iconHolder.style.width = r.$iconHolder.style.height = r.size);
-                                        }(this, 0, n);
-                                        break;
-                                    case "rotate":
-                                        e && r.classList.remove("bx-rotate-" + e), n && r.classList.add("bx-rotate-" + n);
-                                        break;
-                                    case "flip":
-                                        e && r.classList.remove("bx-flip-" + e), n && r.classList.add("bx-flip-" + n);
-                                        break;
-                                    case "animation":
-                                        e && r.classList.remove("bx-" + e), n && r.classList.add("bx-" + n);
-                                }
-                            }
-                        },
-                        {
-                            key: "connectedCallback",
-                            value: function() {
-                                h() && p.ShadyCSS.styleElement(this);
-                            }
-                        }
-                    ]), e;
-                }());
-                e.default = g, g.define();
-            }
-        ]);
-    }, module.exports = e();
-}); //# sourceMappingURL=boxicons.js.map
-
-},{}],"8OKvh":[function(require,module,exports) {
-class MobileMenuToggle {
-    #navWrapper = document.querySelector(".nav__mobile-wrapper");
-    #mobileIsOpen = false;
-    constructor(){
-        // Attach event listener to icon
-        window.addEventListener("click", (e)=>{
-            // Uses propagation
-            const clicked = e.target;
-            this.autoCloseMenu(clicked);
-            this.toggleMenu(clicked);
-        });
-    }
-    // Open/Close by clicking the icon
-    toggleMenu(clicked) {
-        if (clicked.classList.contains("nav__toggle-mobile")) {
-            this.#navWrapper.classList.toggle("mobile-open");
-            this.#mobileIsOpen = !this.#mobileIsOpen;
-        }
-    }
-    // Close the menu when clicking outside the modal.
-    autoCloseMenu(clicked) {
-        if (!clicked.closest(".nav__mobile-container") && !clicked.classList.contains("nav__toggle-mobile") && this.#mobileIsOpen) {
-            this.#navWrapper.classList.remove("mobile-open");
-            this.#mobileIsOpen = !this.#mobileIsOpen;
-        }
-    }
-}
-const mobileToggle = new MobileMenuToggle();
-
-},{}],"3JIcE":[function(require,module,exports) {
-var _linkHistory = require("./link-history");
-class ShortenLink {
-    #shortenInput = document.querySelector(".shorten__input");
-    #shortenSubmit = document.querySelector(".shorten__submit");
-    #shortenInputWarning = document.querySelector(".shorted__input-warning");
-    #loadIcon = document.querySelector(".loading-link");
-    constructor(){
-        this.#shortenSubmit.addEventListener("click", this.#submitLink.bind(this));
-    }
-    async #submitLink(e) {
-        // Stops the form from submitting
-        e.preventDefault();
-        // Retrieves the typed in link.
-        // TEMPORARY
-        const requestedLink = this.#shortenInput.value;
-        // Display error if empty
-        if (requestedLink.length === 0) {
-            this.#displayError("Please add a link");
-            return;
-        }
-        // Load & Icons and fetch the link from API
-        this.#switchToLoadIcon();
-        const returnedLink = await this.getShortenedLink(requestedLink);
-        this.#switchToSubmitButton();
-        // Invalid Link
-        if (!returnedLink) {
-            this.#displayError("Invalid link, Please try a different link");
-            return;
-        }
-        // Reset input
-        this.#shortenInput.value = "";
-        (0, _linkHistory.linkHistories).addLink(requestedLink, returnedLink);
-    }
-    async getShortenedLink(requestedLink) {
-        try {
-            const shortenedLinkJson = await fetch(`https://api.shrtco.de/v2/shorten?url=${requestedLink}`);
-            const { result: shortenedLink } = await shortenedLinkJson.json();
-            return shortenedLink.full_short_link;
-        } catch (error) {
-            return false;
-        }
-    }
-    #switchToLoadIcon() {
-        this.#loadIcon.style.display = "grid";
-        this.#shortenSubmit.style.display = "none";
-    }
-    #switchToSubmitButton() {
-        this.#loadIcon.style.display = "none";
-        this.#shortenSubmit.style.display = "initial";
-    }
-    #displayError(errorMsg) {
-        this.#shortenInputWarning.textContent = errorMsg;
-        this.#shortenInputWarning.style.display = "flex";
-        this.#shortenInput.style.outline = "2px solid red";
-        this.#shortenInput.focus();
-        setTimeout(()=>{
-            this.#shortenInputWarning.style.display = "none";
-            this.#shortenInput.style.outline = "none";
-        }, 2000);
-    }
-}
-const shorten = new ShortenLink();
-
-},{"./link-history":"xNAhf"}],"xNAhf":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "linkHistories", ()=>linkHistories);
-class Histories {
-    #linkHistories = [];
-    #containerHistories = document.querySelector(".shorten__histories");
-    constructor(){
-        this.#containerHistories.addEventListener("click", this.#copyLink.bind(this));
-    }
-    // Public API
-    addLink(requestedLink, shortenedLink) {
-        const newLink = new LinkHistory(requestedLink, shortenedLink);
-        this.#linkHistories.push(newLink);
-        this.#renderLink(newLink);
-    }
-    #renderLink({ requestedLink, shortenedLink, id }) {
-        const html = `
-    <div class="shorten__animate">
-      <article class="shorten__history">
-        <div class="shorten__history--left">
-          <h3 class="text-medium text-black">
-            ${requestedLink}
-          </h3>
-        </div>
-        <div class="shorten__history--right">
-          <div>
-            <a href="${shortenedLink}" 
-            target="_blank" 
-            class="text-medium text-cyan shorten__link" 
-            >
-              ${shortenedLink}
-            </a>
-          </div>
-          <button
-            class="shorten__copy button button-small rounded-light button-cyan text-bold text-small"
-          data-id=${id}>
-            Copy
-          </button>
-        </div>
-      </article>
-    </div>
-    `;
-        // Check viewport size before animating
-        this.#animateEntrance(html, this.#viewportSize);
-    }
-    async #animateEntrance(html, viewport) {
-        const dummy = document.createElement("div");
-        dummy.classList.add("slidedown-container");
-        // 1.Insert dummy (for slide, position static)
-        this.#containerHistories.insertAdjacentElement("afterbegin", dummy);
-        // 2. [await] Animate Dummy slide
-        await new Promise((resolve)=>{
-            dummy.addEventListener("animationend", ()=>{
-                dummy.style.height = viewport === "desktop" ? "5.2rem" : "10.2rem";
-                resolve();
-            });
-        });
-        // 3. Insert Actual Element (position absolute)
-        this.#containerHistories.insertAdjacentHTML("afterbegin", html);
-        // 4. [await] Animate actual ELement
-        const historyElement = document.querySelector(".shorten__animate");
-        const historyElementChild = historyElement.children[0];
-        const childElementWidth = dummy.getBoundingClientRect().width;
-        await new Promise((resolve)=>{
-            // 4.1 find actual element width (in px)
-            // We use the dummy element because the actual element width is at 0 (at this point of the code)
-            // 4.2 set element width in rem
-            historyElementChild.style.width = `${childElementWidth / 16}rem`;
-            // 4.3 set container width to 100%
-            historyElement.style.width = "100%";
-            // 4.4
-            // (Slide left animation is set to 0.5s (at the time of writing this))
-            setTimeout((e)=>{
-                historyElementChild.style.width = "100%";
-                resolve();
-            }, 500);
-        });
-        // 5. element to position relative
-        historyElement.style.position = "relative";
-        // 6. remove dummy
-        dummy.remove();
-    }
-    #copyLink(e) {
-        const clicked = e.target.closest(".shorten__copy");
-        if (!clicked || !clicked.classList.contains("shorten__copy")) return;
-        // Finds link
-        const linkObject = this.#linkHistories.find((history)=>history.id === clicked.dataset.id);
-        // Adds shortened link to clipboard
-        navigator.clipboard.writeText(linkObject.shortenedLink);
-        // Display the button flicker animation
-        this.#copyLinkButtonFlicker(clicked);
-    }
-    #copyLinkButtonFlicker(clicked) {
-        clicked.classList.add("button-copied-state");
-        clicked.textContent = "Copied!";
-        setTimeout(()=>{
-            clicked.classList.remove("button-copied-state");
-            clicked.textContent = "Copy";
-        }, 2000);
-    }
-    // Return the current viewport size;
-    get #viewportSize() {
-        return window.innerWidth > 780 ? "desktop" : "mobile";
-    }
-}
-class LinkHistory {
-    constructor(requestedLink, shortenedLink){
-        this.requestedLink = requestedLink;
-        this.shortenedLink = shortenedLink;
-        this.setId();
-    }
-    setId() {
-        this.id = new Date().getTime().toString().slice(-8);
-    }
-}
-const linkHistories = new Histories();
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"49tUX":[function(require,module,exports) {
+},{"core-js/modules/web.immediate.js":"49tUX","boxicons":"1afqO","./mobile-nav.js":"8OKvh","./shortenlink.js":"3JIcE","./link-history.js":"xNAhf","regenerator-runtime/runtime":"dXNgZ","core-js/modules/esnext.symbol.dispose.js":"b9ez5"}],"49tUX":[function(require,module,exports) {
 "use strict";
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require("52e9b3eefbbce1ed");
@@ -2384,7 +1827,589 @@ module.exports = function(scheduler, hasTimeArg) {
 "use strict";
 /* global Bun -- Deno case */ module.exports = typeof Bun == "function" && Bun && typeof Bun.version == "string";
 
-},{}],"dXNgZ":[function(require,module,exports) {
+},{}],"1afqO":[function(require,module,exports) {
+!function(t, e, n, r, o) {
+    if ("customElements" in n) o();
+    else {
+        if (n.AWAITING_WEB_COMPONENTS_POLYFILL) return void n.AWAITING_WEB_COMPONENTS_POLYFILL.then(o);
+        var a = n.AWAITING_WEB_COMPONENTS_POLYFILL = f();
+        a.then(o);
+        var i = n.WEB_COMPONENTS_POLYFILL || "//cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.0.2/webcomponents-bundle.js", s = n.ES6_CORE_POLYFILL || "//cdnjs.cloudflare.com/ajax/libs/core-js/2.5.3/core.min.js";
+        "Promise" in n ? c(i).then(function() {
+            a.isDone = !0, a.exec();
+        }) : c(s).then(function() {
+            c(i).then(function() {
+                a.isDone = !0, a.exec();
+            });
+        });
+    }
+    function f() {
+        var t = [];
+        return t.isDone = !1, t.exec = function() {
+            t.splice(0).forEach(function(t) {
+                t();
+            });
+        }, t.then = function(e) {
+            return t.isDone ? e() : t.push(e), t;
+        }, t;
+    }
+    function c(t) {
+        var e = f(), n = r.createElement("script");
+        return n.type = "text/javascript", n.readyState ? n.onreadystatechange = function() {
+            "loaded" != n.readyState && "complete" != n.readyState || (n.onreadystatechange = null, e.isDone = !0, e.exec());
+        } : n.onload = function() {
+            e.isDone = !0, e.exec();
+        }, n.src = t, r.getElementsByTagName("head")[0].appendChild(n), n.then = e.then, n;
+    }
+}(0, 0, window, document, function() {
+    var t, e;
+    t = window, e = function() {
+        return function(t) {
+            var e = {};
+            function n(r) {
+                if (e[r]) return e[r].exports;
+                var o = e[r] = {
+                    i: r,
+                    l: !1,
+                    exports: {}
+                };
+                return t[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports;
+            }
+            return n.m = t, n.c = e, n.d = function(t, e, r) {
+                n.o(t, e) || Object.defineProperty(t, e, {
+                    enumerable: !0,
+                    get: r
+                });
+            }, n.r = function(t) {
+                "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag, {
+                    value: "Module"
+                }), Object.defineProperty(t, "__esModule", {
+                    value: !0
+                });
+            }, n.t = function(t, e) {
+                if (1 & e && (t = n(t)), 8 & e) return t;
+                if (4 & e && "object" == typeof t && t && t.__esModule) return t;
+                var r = Object.create(null);
+                if (n.r(r), Object.defineProperty(r, "default", {
+                    enumerable: !0,
+                    value: t
+                }), 2 & e && "string" != typeof t) for(var o in t)n.d(r, o, (function(e) {
+                    return t[e];
+                }).bind(null, o));
+                return r;
+            }, n.n = function(t) {
+                var e = t && t.__esModule ? function() {
+                    return t.default;
+                } : function() {
+                    return t;
+                };
+                return n.d(e, "a", e), e;
+            }, n.o = function(t, e) {
+                return Object.prototype.hasOwnProperty.call(t, e);
+            }, n.p = "", n(n.s = 5);
+        }([
+            function(t, e) {
+                t.exports = function(t) {
+                    var e = [];
+                    return e.toString = function() {
+                        return this.map(function(e) {
+                            var n = function(t, e) {
+                                var n, r = t[1] || "", o = t[3];
+                                if (!o) return r;
+                                if (e && "function" == typeof btoa) {
+                                    var a = (n = o, "/*# sourceMappingURL=data:application/json;charset=utf-8;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(n)))) + " */"), i = o.sources.map(function(t) {
+                                        return "/*# sourceURL=" + o.sourceRoot + t + " */";
+                                    });
+                                    return [
+                                        r
+                                    ].concat(i).concat([
+                                        a
+                                    ]).join("\n");
+                                }
+                                return [
+                                    r
+                                ].join("\n");
+                            }(e, t);
+                            return e[2] ? "@media " + e[2] + "{" + n + "}" : n;
+                        }).join("");
+                    }, e.i = function(t, n) {
+                        "string" == typeof t && (t = [
+                            [
+                                null,
+                                t,
+                                ""
+                            ]
+                        ]);
+                        for(var r = {}, o = 0; o < this.length; o++){
+                            var a = this[o][0];
+                            "number" == typeof a && (r[a] = !0);
+                        }
+                        for(o = 0; o < t.length; o++){
+                            var i = t[o];
+                            "number" == typeof i[0] && r[i[0]] || (n && !i[2] ? i[2] = n : n && (i[2] = "(" + i[2] + ") and (" + n + ")"), e.push(i));
+                        }
+                    }, e;
+                };
+            },
+            function(t, e, n) {
+                var r = n(3);
+                t.exports = "string" == typeof r ? r : r.toString();
+            },
+            function(t, e, n) {
+                var r = n(4);
+                t.exports = "string" == typeof r ? r : r.toString();
+            },
+            function(t, e, n) {
+                (t.exports = n(0)(!1)).push([
+                    t.i,
+                    "@-webkit-keyframes spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@-webkit-keyframes burst{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}90%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@keyframes burst{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}90%{-webkit-transform:scale(1.5);transform:scale(1.5);opacity:0}}@-webkit-keyframes flashing{0%{opacity:1}45%{opacity:0}90%{opacity:1}}@keyframes flashing{0%{opacity:1}45%{opacity:0}90%{opacity:1}}@-webkit-keyframes fade-left{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(-20px);transform:translateX(-20px);opacity:0}}@keyframes fade-left{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(-20px);transform:translateX(-20px);opacity:0}}@-webkit-keyframes fade-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(20px);transform:translateX(20px);opacity:0}}@keyframes fade-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}75%{-webkit-transform:translateX(20px);transform:translateX(20px);opacity:0}}@-webkit-keyframes fade-up{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(-20px);transform:translateY(-20px);opacity:0}}@keyframes fade-up{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(-20px);transform:translateY(-20px);opacity:0}}@-webkit-keyframes fade-down{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}}@keyframes fade-down{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}75%{-webkit-transform:translateY(20px);transform:translateY(20px);opacity:0}}@-webkit-keyframes tada{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}10%,20%{-webkit-transform:scale3d(.95,.95,.95) rotate(-10deg);transform:scale3d(.95,.95,.95) rotate(-10deg)}30%,50%,70%,90%{-webkit-transform:scaleX(1) rotate(10deg);transform:scaleX(1) rotate(10deg)}40%,60%,80%{-webkit-transform:scaleX(1) rotate(-10deg);transform:scaleX(1) rotate(-10deg)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes tada{0%{-webkit-transform:scaleX(1);transform:scaleX(1)}10%,20%{-webkit-transform:scale3d(.95,.95,.95) rotate(-10deg);transform:scale3d(.95,.95,.95) rotate(-10deg)}30%,50%,70%,90%{-webkit-transform:scaleX(1) rotate(10deg);transform:scaleX(1) rotate(10deg)}40%,60%,80%{-webkit-transform:rotate(-10deg);transform:rotate(-10deg)}to{-webkit-transform:scaleX(1);transform:scaleX(1)}}.bx-spin,.bx-spin-hover:hover{-webkit-animation:spin 2s linear infinite;animation:spin 2s linear infinite}.bx-tada,.bx-tada-hover:hover{-webkit-animation:tada 1.5s ease infinite;animation:tada 1.5s ease infinite}.bx-flashing,.bx-flashing-hover:hover{-webkit-animation:flashing 1.5s infinite linear;animation:flashing 1.5s infinite linear}.bx-burst,.bx-burst-hover:hover{-webkit-animation:burst 1.5s infinite linear;animation:burst 1.5s infinite linear}.bx-fade-up,.bx-fade-up-hover:hover{-webkit-animation:fade-up 1.5s infinite linear;animation:fade-up 1.5s infinite linear}.bx-fade-down,.bx-fade-down-hover:hover{-webkit-animation:fade-down 1.5s infinite linear;animation:fade-down 1.5s infinite linear}.bx-fade-left,.bx-fade-left-hover:hover{-webkit-animation:fade-left 1.5s infinite linear;animation:fade-left 1.5s infinite linear}.bx-fade-right,.bx-fade-right-hover:hover{-webkit-animation:fade-right 1.5s infinite linear;animation:fade-right 1.5s infinite linear}",
+                    ""
+                ]);
+            },
+            function(t, e, n) {
+                (t.exports = n(0)(!1)).push([
+                    t.i,
+                    '.bx-rotate-90{transform:rotate(90deg);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=1)"}.bx-rotate-180{transform:rotate(180deg);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"}.bx-rotate-270{transform:rotate(270deg);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"}.bx-flip-horizontal{transform:scaleX(-1);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)"}.bx-flip-vertical{transform:scaleY(-1);-ms-filter:"progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)"}',
+                    ""
+                ]);
+            },
+            function(t, e, n) {
+                "use strict";
+                n.r(e), n.d(e, "BoxIconElement", function() {
+                    return g;
+                });
+                var r, o, a, i, s = n(1), f = n.n(s), c = n(2), l = n.n(c), m = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
+                    return typeof t;
+                } : function(t) {
+                    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
+                }, u = function() {
+                    function t(t, e) {
+                        for(var n = 0; n < e.length; n++){
+                            var r = e[n];
+                            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r);
+                        }
+                    }
+                    return function(e, n, r) {
+                        return n && t(e.prototype, n), r && t(e, r), e;
+                    };
+                }(), d = (o = (r = Object).getPrototypeOf || function(t) {
+                    return t.__proto__;
+                }, a = r.setPrototypeOf || function(t, e) {
+                    return t.__proto__ = e, t;
+                }, i = "object" === ("undefined" == typeof Reflect ? "undefined" : m(Reflect)) ? Reflect.construct : function(t, e, n) {
+                    var r, o = [
+                        null
+                    ];
+                    return o.push.apply(o, e), r = t.bind.apply(t, o), a(new r, n.prototype);
+                }, function(t) {
+                    var e = o(t);
+                    return a(t, a(function() {
+                        return i(e, arguments, o(this).constructor);
+                    }, e));
+                }), p = window, b = {}, y = document.createElement("template"), h = function() {
+                    return !!p.ShadyCSS;
+                };
+                y.innerHTML = '\n<style>\n:host {\n  display: inline-block;\n  font-size: initial;\n  box-sizing: border-box;\n  width: 24px;\n  height: 24px;\n}\n:host([size=xs]) {\n    width: 0.8rem;\n    height: 0.8rem;\n}\n:host([size=sm]) {\n    width: 1.55rem;\n    height: 1.55rem;\n}\n:host([size=md]) {\n    width: 2.25rem;\n    height: 2.25rem;\n}\n:host([size=lg]) {\n    width: 3.0rem;\n    height: 3.0rem;\n}\n\n:host([size]:not([size=""]):not([size=xs]):not([size=sm]):not([size=md]):not([size=lg])) {\n    width: auto;\n    height: auto;\n}\n:host([pull=left]) #icon {\n    float: left;\n    margin-right: .3em!important;\n}\n:host([pull=right]) #icon {\n    float: right;\n    margin-left: .3em!important;\n}\n:host([border=square]) #icon {\n    padding: .25em;\n    border: .07em solid rgba(0,0,0,.1);\n    border-radius: .25em;\n}\n:host([border=circle]) #icon {\n    padding: .25em;\n    border: .07em solid rgba(0,0,0,.1);\n    border-radius: 50%;\n}\n#icon,\nsvg {\n  width: 100%;\n  height: 100%;\n}\n#icon {\n    box-sizing: border-box;\n} \n' + f.a + "\n" + l.a + '\n</style>\n<div id="icon"></div>';
+                var g = d(function(t) {
+                    function e() {
+                        !function(t, e) {
+                            if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function");
+                        }(this, e);
+                        var t = function(t, e) {
+                            if (!t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                            return !e || "object" != typeof e && "function" != typeof e ? t : e;
+                        }(this, (e.__proto__ || Object.getPrototypeOf(e)).call(this));
+                        return t.$ui = t.attachShadow({
+                            mode: "open"
+                        }), t.$ui.appendChild(t.ownerDocument.importNode(y.content, !0)), h() && p.ShadyCSS.styleElement(t), t._state = {
+                            $iconHolder: t.$ui.getElementById("icon"),
+                            type: t.getAttribute("type")
+                        }, t;
+                    }
+                    return function(t, e) {
+                        if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function, not " + typeof e);
+                        t.prototype = Object.create(e && e.prototype, {
+                            constructor: {
+                                value: t,
+                                enumerable: !1,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e);
+                    }(e, HTMLElement), u(e, null, [
+                        {
+                            key: "getIconSvg",
+                            value: function(t, e) {
+                                var n = this.cdnUrl + "/regular/bx-" + t + ".svg";
+                                return "solid" === e ? n = this.cdnUrl + "/solid/bxs-" + t + ".svg" : "logo" === e && (n = this.cdnUrl + "/logos/bxl-" + t + ".svg"), n && b[n] || (b[n] = new Promise(function(t, e) {
+                                    var r = new XMLHttpRequest;
+                                    r.addEventListener("load", function() {
+                                        this.status < 200 || this.status >= 300 ? e(new Error(this.status + " " + this.responseText)) : t(this.responseText);
+                                    }), r.onerror = e, r.onabort = e, r.open("GET", n), r.send();
+                                })), b[n];
+                            }
+                        },
+                        {
+                            key: "define",
+                            value: function(t) {
+                                t = t || this.tagName, h() && p.ShadyCSS.prepareTemplate(y, t), customElements.define(t, this);
+                            }
+                        },
+                        {
+                            key: "cdnUrl",
+                            get: function() {
+                                return "//unpkg.com/boxicons@2.1.4/svg";
+                            }
+                        },
+                        {
+                            key: "tagName",
+                            get: function() {
+                                return "box-icon";
+                            }
+                        },
+                        {
+                            key: "observedAttributes",
+                            get: function() {
+                                return [
+                                    "type",
+                                    "name",
+                                    "color",
+                                    "size",
+                                    "rotate",
+                                    "flip",
+                                    "animation",
+                                    "border",
+                                    "pull"
+                                ];
+                            }
+                        }
+                    ]), u(e, [
+                        {
+                            key: "attributeChangedCallback",
+                            value: function(t, e, n) {
+                                var r = this._state.$iconHolder;
+                                switch(t){
+                                    case "type":
+                                        !function(t, e, n) {
+                                            var r = t._state;
+                                            r.$iconHolder.textContent = "", r.type && (r.type = null), r.type = !n || "solid" !== n && "logo" !== n ? "regular" : n, void 0 !== r.currentName && t.constructor.getIconSvg(r.currentName, r.type).then(function(t) {
+                                                r.type === n && (r.$iconHolder.innerHTML = t);
+                                            }).catch(function(t) {
+                                                console.error("Failed to load icon: " + r.currentName + "\n" + t);
+                                            });
+                                        }(this, 0, n);
+                                        break;
+                                    case "name":
+                                        !function(t, e, n) {
+                                            var r = t._state;
+                                            r.currentName = n, r.$iconHolder.textContent = "", n && void 0 !== r.type && t.constructor.getIconSvg(n, r.type).then(function(t) {
+                                                r.currentName === n && (r.$iconHolder.innerHTML = t);
+                                            }).catch(function(t) {
+                                                console.error("Failed to load icon: " + n + "\n" + t);
+                                            });
+                                        }(this, 0, n);
+                                        break;
+                                    case "color":
+                                        r.style.fill = n || "";
+                                        break;
+                                    case "size":
+                                        !function(t, e, n) {
+                                            var r = t._state;
+                                            r.size && (r.$iconHolder.style.width = r.$iconHolder.style.height = "", r.size = r.sizeType = null), n && !/^(xs|sm|md|lg)$/.test(r.size) && (r.size = n.trim(), r.$iconHolder.style.width = r.$iconHolder.style.height = r.size);
+                                        }(this, 0, n);
+                                        break;
+                                    case "rotate":
+                                        e && r.classList.remove("bx-rotate-" + e), n && r.classList.add("bx-rotate-" + n);
+                                        break;
+                                    case "flip":
+                                        e && r.classList.remove("bx-flip-" + e), n && r.classList.add("bx-flip-" + n);
+                                        break;
+                                    case "animation":
+                                        e && r.classList.remove("bx-" + e), n && r.classList.add("bx-" + n);
+                                }
+                            }
+                        },
+                        {
+                            key: "connectedCallback",
+                            value: function() {
+                                h() && p.ShadyCSS.styleElement(this);
+                            }
+                        }
+                    ]), e;
+                }());
+                e.default = g, g.define();
+            }
+        ]);
+    }, module.exports = e();
+}); //# sourceMappingURL=boxicons.js.map
+
+},{}],"8OKvh":[function(require,module,exports) {
+class MobileMenuToggle {
+    #navWrapper = document.querySelector(".nav__mobile-wrapper");
+    #mobileIsOpen = false;
+    constructor(){
+        // Attach event listener to icon
+        window.addEventListener("click", (e)=>{
+            // Uses propagation
+            const clicked = e.target;
+            this.autoCloseMenu(clicked);
+            this.toggleMenu(clicked);
+        });
+    }
+    // Open/Close by clicking the icon
+    toggleMenu(clicked) {
+        if (clicked.classList.contains("nav__toggle-mobile")) {
+            this.#navWrapper.classList.toggle("mobile-open");
+            this.#mobileIsOpen = !this.#mobileIsOpen;
+        }
+    }
+    // Close the menu when clicking outside the modal.
+    autoCloseMenu(clicked) {
+        if (!clicked.closest(".nav__mobile-container") && !clicked.classList.contains("nav__toggle-mobile") && this.#mobileIsOpen) {
+            this.#navWrapper.classList.remove("mobile-open");
+            this.#mobileIsOpen = !this.#mobileIsOpen;
+        }
+    }
+}
+const mobileToggle = new MobileMenuToggle();
+
+},{}],"3JIcE":[function(require,module,exports) {
+var _linkHistory = require("./link-history");
+class ShortenLink {
+    #shortenInput = document.querySelector(".shorten__input");
+    #shortenSubmit = document.querySelector(".shorten__submit");
+    #shortenInputWarning = document.querySelector(".shorted__input-warning");
+    #shortenContainer = document.querySelector(".shorten-container");
+    #loadIcon = document.querySelector(".loading-link");
+    constructor(){
+        this.#shortenSubmit.addEventListener("click", this.#submitLink.bind(this));
+    }
+    async #submitLink(e) {
+        // Stops the form from refreshing
+        e.preventDefault();
+        // Retrieves the typed in link.
+        const requestedLink = this.#shortenInput.value;
+        // Display error if empty
+        if (requestedLink.length === 0) {
+            this.#displayError("Please add a link");
+            return;
+        }
+        // Load Icons and fetch the link from API
+        this.#switchToLoadIcon();
+        const returnedLink = await this.getShortenedLink(requestedLink);
+        this.#switchToSubmitButton();
+        // Invalid Link
+        if (!returnedLink) {
+            this.#displayError("Invalid link, Please try a different link");
+            return;
+        }
+        // Reset input
+        this.#shortenInput.value = "";
+        (0, _linkHistory.linkHistories).addLink(requestedLink, returnedLink);
+    }
+    async getShortenedLink(requestedLink) {
+        try {
+            const shortenedLinkJson = await fetch(`https://api.shrtco.de/v2/shorten?url=${requestedLink}`);
+            const { result: shortenedLink } = await shortenedLinkJson.json();
+            return shortenedLink.full_short_link;
+        } catch (error) {
+            return false;
+        }
+    }
+    #switchToLoadIcon() {
+        this.#loadIcon.style.display = "grid";
+        this.#shortenSubmit.style.display = "none";
+    }
+    #switchToSubmitButton() {
+        this.#loadIcon.style.display = "none";
+        this.#shortenSubmit.style.display = "initial";
+    }
+    #displayError(errorMsg) {
+        // Show error msg
+        this.#shortenInputWarning.textContent = errorMsg;
+        this.#shortenInputWarning.style.display = "flex";
+        this.#shortenInput.style.outline = "2px solid red";
+        this.#shortenInput.focus();
+        // Extend screen sizes for mobile
+        this.#shortenContainer.style.setProperty("--gap", "2.5rem");
+        // Hide error msg
+        setTimeout(()=>{
+            this.#shortenInputWarning.style.display = "none";
+            this.#shortenInput.style.outline = "none";
+            this.#shortenContainer.style.setProperty("--gap", "1rem");
+        }, 2000);
+    }
+}
+const shorten = new ShortenLink();
+
+},{"./link-history":"xNAhf"}],"xNAhf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "linkHistories", ()=>linkHistories);
+var _utilities = require("./utilities");
+class Histories {
+    #linkHistories = [];
+    #containerHistories = document.querySelector(".shorten__histories");
+    constructor(){
+        this.#containerHistories.addEventListener("click", this.#copyLink.bind(this));
+    }
+    // Public API
+    addLink(requestedLink, shortenedLink) {
+        const newLink = new LinkHistory(requestedLink, shortenedLink);
+        this.#linkHistories.push(newLink);
+        this.#renderLink(newLink);
+    }
+    #renderLink({ requestedLink, shortenedLink, id }) {
+        const html = `
+    <div class="shorten__animate">
+      <article class="shorten__history">
+        <div class="shorten__history--left">
+          <h3 class="text-medium text-black">
+            ${requestedLink}
+          </h3>
+        </div>
+        <div class="shorten__history--right">
+          <div>
+            <a href="${shortenedLink}" 
+            target="_blank" 
+            class="text-medium text-cyan shorten__link" 
+            >
+              ${shortenedLink}
+            </a>
+          </div>
+          <button
+            class="shorten__copy button button-small rounded-light button-cyan text-bold text-small"
+          data-id=${id}>
+            Copy
+          </button>
+        </div>
+      </article>
+    </div>
+    `;
+        // Check viewport ize before animating
+        this.#animateEntrance(html, (0, _utilities.Application).viewportWidth);
+    }
+    async #animateEntrance(html, viewport) {
+        const dummy = document.createElement("div");
+        dummy.classList.add("slidedown-container");
+        // 1.Insert dummy (for slide, position static)
+        this.#containerHistories.insertAdjacentElement("afterbegin", dummy);
+        // 2. [await] Animate Dummy slide
+        await new Promise((resolve)=>{
+            dummy.addEventListener("animationend", ()=>{
+                dummy.style.height = viewport === "desktop" ? "5.2rem" : "10.2rem";
+                resolve();
+            });
+        });
+        // 3. Insert Actual Element (position absolute)
+        this.#containerHistories.insertAdjacentHTML("afterbegin", html);
+        // 4. [await] Animate actual ELement
+        const historyElement = document.querySelector(".shorten__animate");
+        const historyElementChild = historyElement.children[0];
+        const childElementWidth = dummy.getBoundingClientRect().width;
+        await new Promise((resolve)=>{
+            // 4.1 find actual element width (in px)
+            // We use the dummy element because the actual element width is at 0 (at this point of the code)
+            // 4.2 set element width in rem
+            historyElementChild.style.width = `${childElementWidth / 16}rem`;
+            // 4.3 set container width to 100%
+            historyElement.style.width = "100%";
+            // 4.4
+            // (Slide left animation is set to 0.5s (at the time of writing this))
+            setTimeout(()=>{
+                historyElementChild.style.width = "100%";
+                resolve();
+            }, 500);
+        });
+        // 5. element to position relative
+        historyElement.style.position = "relative";
+        // 6. remove dummy
+        dummy.remove();
+    }
+    #copyLink(e) {
+        const clicked = e.target.closest(".shorten__copy");
+        if (!clicked || !clicked.classList.contains("shorten__copy")) return;
+        // Finds link
+        const linkObject = this.#linkHistories.find((history)=>history.id === clicked.dataset.id);
+        // Adds shortened link to clipboard
+        navigator.clipboard.writeText(linkObject.shortenedLink);
+        // Display the button flicker animation
+        this.#copyLinkButtonFlicker(clicked);
+    }
+    #copyLinkButtonFlicker(clicked) {
+        clicked.classList.add("button-copied-state");
+        clicked.textContent = "Copied!";
+        setTimeout(()=>{
+            clicked.classList.remove("button-copied-state");
+            clicked.textContent = "Copy";
+        }, 2000);
+    }
+    // Return the current viewport size;
+    get #viewportSize() {
+        return window.innerWidth > 780 ? "desktop" : "mobile";
+    }
+}
+class LinkHistory {
+    constructor(requestedLink, shortenedLink){
+        this.requestedLink = requestedLink;
+        this.shortenedLink = shortenedLink;
+        this.setId();
+    }
+    setId() {
+        this.id = new Date().getTime().toString().slice(-8);
+    }
+}
+const linkHistories = new Histories();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./utilities":"f4wib"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"f4wib":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "wait", ()=>wait);
+parcelHelpers.export(exports, "Application", ()=>Application);
+function wait(seconds) {
+    return new Promise((resolve)=>{
+        setTimeout(resolve, seconds * 1000);
+    });
+}
+class App {
+    constructor(){}
+    get viewportWidth() {
+        return window.innerWidth > 780 ? "desktop" : "mobile";
+    }
+}
+const Application = new App();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dXNgZ":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -2968,6 +2993,52 @@ try {
     else Function("r", "regeneratorRuntime = r")(runtime);
 }
 
-},{}]},["lWQBG","bDbGG"], "bDbGG", "parcelRequire5d76")
+},{}],"b9ez5":[function(require,module,exports) {
+"use strict";
+var global = require("c050e94c4f6437d6");
+var defineWellKnownSymbol = require("efe796c38aca437b");
+var defineProperty = require("d6dbf5d754dc3607").f;
+var getOwnPropertyDescriptor = require("9075339d618418b3").f;
+var Symbol = global.Symbol;
+// `Symbol.dispose` well-known symbol
+// https://github.com/tc39/proposal-explicit-resource-management
+defineWellKnownSymbol("dispose");
+if (Symbol) {
+    var descriptor = getOwnPropertyDescriptor(Symbol, "dispose");
+    // workaround of NodeJS 20.4 bug
+    // https://github.com/nodejs/node/issues/48699
+    // and incorrect descriptor from some transpilers and userland helpers
+    if (descriptor.enumerable && descriptor.configurable && descriptor.writable) defineProperty(Symbol, "dispose", {
+        value: descriptor.value,
+        enumerable: false,
+        configurable: false,
+        writable: false
+    });
+}
+
+},{"c050e94c4f6437d6":"i8HOC","efe796c38aca437b":"en5fF","d6dbf5d754dc3607":"iJR4w","9075339d618418b3":"lk5NI"}],"en5fF":[function(require,module,exports) {
+"use strict";
+var path = require("8d5159b7d317832f");
+var hasOwn = require("42a3ea18819bfbb");
+var wrappedWellKnownSymbolModule = require("7ec639749e279eeb");
+var defineProperty = require("cbbe4becefd5c21c").f;
+module.exports = function(NAME) {
+    var Symbol = path.Symbol || (path.Symbol = {});
+    if (!hasOwn(Symbol, NAME)) defineProperty(Symbol, NAME, {
+        value: wrappedWellKnownSymbolModule.f(NAME)
+    });
+};
+
+},{"8d5159b7d317832f":"gKjqB","42a3ea18819bfbb":"gC2Q5","7ec639749e279eeb":"9TrPc","cbbe4becefd5c21c":"iJR4w"}],"gKjqB":[function(require,module,exports) {
+"use strict";
+var global = require("70f8eb6067a24c7e");
+module.exports = global;
+
+},{"70f8eb6067a24c7e":"i8HOC"}],"9TrPc":[function(require,module,exports) {
+"use strict";
+var wellKnownSymbol = require("2e34ececd06658d9");
+exports.f = wellKnownSymbol;
+
+},{"2e34ececd06658d9":"gTwyA"}]},["lWQBG","bDbGG"], "bDbGG", "parcelRequire5d76")
 
 //# sourceMappingURL=index.fbb3188c.js.map
